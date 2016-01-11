@@ -1,0 +1,19 @@
+<div class="autocomplete__dropdown" ng-show="!!showAutoComplete">
+  <div class="autocomplete__dataset">
+    <div class="autocomplete__suggestion"
+         ng-click="completeUser(element)"
+         ng-repeat="element in dataset | filter:searchStr">
+
+      <img ng-src="{{::element['avatar_url']}}">
+
+      <p class="autocomplete__user">
+          <span class="autocomplete__username">
+            {{::element['username']}}
+          </span>
+          <span class="autocomplete__name">
+            {{::element['name']}}
+          </span>
+      </p>
+    </div>
+  </div>
+</div>

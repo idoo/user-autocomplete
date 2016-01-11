@@ -1,0 +1,86 @@
+$base-blue: #4684BE;
+$font: 'Helvetica', 'Arial', "Lucida Grande", 'sans-serif';
+$max-content-width: 960px;
+$blue: #4684BE;
+$suggest-line: 80px;
+
+body {
+  font-family: $font;
+  background-color: #f1f1f1;
+}
+
+*:focus {
+  outline: 0;
+}
+
+.is-hidden {
+  display: none !important;
+}
+
+.autocomplete {
+  &__inner {
+    margin: 0 auto;
+    max-width: $max-content-width;
+    position: relative;
+    width: 550px;
+    padding: 70px;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    border: 0 solid #ccc;
+    background-color: #e3e3e3;
+    box-shadow: 0 0 0 0 rgba(42, 42, 42, 0.75);
+    box-sizing: border-box;
+  }
+
+  &__dropdown {
+    position: absolute;
+    z-index: 1;
+    width: inherit;
+    background: white;
+    font-size: 1rem;
+    line-height: 15px;
+    border: 1px solid #e3e3e3;
+    box-sizing: border-box;
+    text-align: left;
+  }
+
+  &__dataset {
+    max-height: 400px;
+    overflow-y: auto;
+  }
+
+  &__suggestion {
+    position: relative;
+    height: 5rem;
+    line-height: 5rem;
+    padding: 10px 50px 10px 20px;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    user-select: none;
+    vertical-align: top;
+
+    &:hover {
+      background: $blue;
+      color: white
+    }
+  }
+
+  &__user {
+    display: inline-block;
+    line-height: 5rem;
+    height: 5rem;
+    vertical-align: top;
+    margin: 0;
+  }
+
+  &__username, &__name {
+    display: block;
+    line-height: 2.5rem;
+  }
+}
