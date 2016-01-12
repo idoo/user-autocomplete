@@ -11,8 +11,8 @@ describe('Service: dataResource', function () {
     dataResource = _dataResource_;
   }));
 
-  it('should do something', function () {
-    expect(!!dataResource).toBe(true);
+  it('should return not empty array', function () {
+    expect(dataResource.length).toBe(200);
   });
 
 });
